@@ -35,6 +35,16 @@ export interface Gdf {
   }[];
 }
 
+export enum TripName {
+  plane = "Plane",
+  car = "Car",
+  bus = "Bus",
+  train = "Train",
+  ferry = "Ferry",
+  myTrip = "My trip",
+  altertiveTrip = "Alternative trip",
+}
+
 export interface TripData {
   ISO2: string;
   NAME: string;
@@ -42,6 +52,6 @@ export interface TripData {
   colors: string;
   path_length: number;
   kgCO2eq: number;
-  "Mean of Transport": Transport;
+  "Mean of Transport": TripName;
   Type: string;
 }

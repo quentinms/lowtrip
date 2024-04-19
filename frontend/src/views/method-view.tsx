@@ -79,6 +79,18 @@ const MethodView = () => {
       </Heading>
       <Text marginBottom={3}>{t("method.introduction.text1")}</Text>
       <Text marginBottom={3}>{t("method.introduction.text2")}</Text>
+      <Text marginBottom={10}>
+        {t("method.introduction.text3")}{" "}
+        <a
+          href={MethodologyPdf}
+          target="_blank"
+          rel="noreferrer"
+          style={{ color: "blue" }}
+        >
+          {t("method.introduction.text4")}
+        </a>
+        {t("method.introduction.text5")}
+      </Text>
 
       <Heading
         as="h2"
@@ -172,42 +184,82 @@ const MethodView = () => {
                 {t("method.emissionFactors.table1.transport_1")}
               </Td>
               <Td>{t("method.emissionFactors.table1.variables_1")}</Td>
-              <Td>{t("method.emissionFactors.table1.why_1").split(';').map((line)=><div>{line}</div>)}</Td>
+              <Td>
+                {t("method.emissionFactors.table1.why_1")
+                  .split(";")
+                  .map((line) => (
+                    <div>{line}</div>
+                  ))}
+              </Td>
             </Tr>
             <Tr>
               <Td bg="blue.100">
                 {t("method.emissionFactors.table1.transport_2")}
               </Td>
               <Td>{t("method.emissionFactors.table1.variables_2")}</Td>
-              <Td>{t("method.emissionFactors.table1.why_2").split(';').map((line)=><div>{line}</div>)}</Td>
+              <Td>
+                {t("method.emissionFactors.table1.why_2")
+                  .split(";")
+                  .map((line) => (
+                    <div>{line}</div>
+                  ))}
+              </Td>
             </Tr>
             <Tr>
               <Td bg="blue.100">
-                {t("method.emissionFactors.table1.transport_3").split(';').map((line)=><div>{line}</div>)}
+                {t("method.emissionFactors.table1.transport_3")
+                  .split(";")
+                  .map((line) => (
+                    <div>{line}</div>
+                  ))}
               </Td>
               <Td>{t("method.emissionFactors.table1.variables_3")}</Td>
-              <Td>{t("method.emissionFactors.table1.why_3").split(';').map((line)=><div>{line}</div>)}</Td>
+              <Td>
+                {t("method.emissionFactors.table1.why_3")
+                  .split(";")
+                  .map((line) => (
+                    <div>{line}</div>
+                  ))}
+              </Td>
             </Tr>
             <Tr>
               <Td bg="blue.100">
                 {t("method.emissionFactors.table1.transport_4")}
               </Td>
               <Td>{t("method.emissionFactors.table1.variables_4")}</Td>
-              <Td>{t("method.emissionFactors.table1.why_4").split(';').map((line)=><div>{line}</div>)}</Td>
+              <Td>
+                {t("method.emissionFactors.table1.why_4")
+                  .split(";")
+                  .map((line) => (
+                    <div>{line}</div>
+                  ))}
+              </Td>
             </Tr>
             <Tr>
               <Td bg="blue.100">
                 {t("method.emissionFactors.table1.transport_5")}
               </Td>
               <Td>{t("method.emissionFactors.table1.variables_5")}</Td>
-              <Td>{t("method.emissionFactors.table1.why_5").split(';').map((line)=><div>{line}</div>)}</Td>
+              <Td>
+                {t("method.emissionFactors.table1.why_5")
+                  .split(";")
+                  .map((line) => (
+                    <div>{line}</div>
+                  ))}
+              </Td>
             </Tr>
             <Tr>
               <Td bg="blue.100">
                 {t("method.emissionFactors.table1.transport_6")}
               </Td>
               <Td>{t("method.emissionFactors.table1.variables_6")}</Td>
-              <Td>{t("method.emissionFactors.table1.why_6").split(';').map((line)=><div>{line}</div>)}</Td>
+              <Td>
+                {t("method.emissionFactors.table1.why_6")
+                  .split(";")
+                  .map((line) => (
+                    <div>{line}</div>
+                  ))}
+              </Td>
             </Tr>
             {/* Add more rows as needed */}
           </Tbody>
@@ -283,19 +335,6 @@ const MethodView = () => {
           </Tbody>
         </Table>
       </TableContainer>
-
-      <Text marginBottom={10}>
-        {t("method.emissionFactors.text2")}{" "}
-        <a
-          href={MethodologyPdf}
-          target="_blank"
-          rel="noreferrer"
-          style={{ color: "blue" }}
-        >
-          {t("method.emissionFactors.text3")}
-        </a>
-        {t("method.emissionFactors.text4")}
-      </Text>
     </Box>
   );
 };

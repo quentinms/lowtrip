@@ -1,4 +1,4 @@
-import { Box, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Image, Stack, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import mollow from "../assets/logo_mollow.png";
 import sailcoop from "../assets/logo_sailcoop.jpg";
@@ -20,6 +20,21 @@ const AboutView = () => {
       color="#595959"
       fontSize={["small", "large"]}
     >
+      <Text marginBottom={3} marginTop={isOnMobile ? 3 : 10}>
+        {t("about.introduction_1")}
+      </Text>
+      <Text marginBottom={3}>{t("about.introduction_2")}</Text>
+
+      <Heading
+        as="h1"
+        color="blue.500"
+        fontWeight="bold"
+        fontSize={"3xl"}
+        marginTop={20}
+        marginBottom={3}
+      >
+        {t("about.inspiringProjects")}
+      </Heading>
       <Stack
         marginBottom={10}
         direction={isOnMobile ? "column-reverse" : "row"}
@@ -58,9 +73,11 @@ const AboutView = () => {
           </Text>
           <Text marginBottom={3}>{t("about.sailcoop_2")}</Text>
         </Box>
-        <a href="https://www.sailcoop.fr/" target="_blank" rel="noreferrer">
-          <Image src={sailcoop} />
-        </a>
+        <Box width={isOnMobile ? "100%" : "1000px"}>
+          <a href="https://www.sailcoop.fr/" target="_blank" rel="noreferrer">
+            <Image src={sailcoop} />
+          </a>
+        </Box>
       </Stack>
 
       <Stack
